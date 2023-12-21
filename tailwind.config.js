@@ -1,18 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [
-    require('@tailwindcss/typography'),
-    require('daisyui')
-  ],
-  daisyui: {
-      themes: ['dracula'],
-  },
-}
-
+    content: [
+        './index.html',
+        './src/**/*.{js,ts,jsx,tsx}',
+    ],
+    theme: {
+        extend: {
+          gridTemplateColumns: {
+            '15': 'repeat(15, minmax(0, 25px))',
+          }
+        }
+    },
+    plugins: [
+        require('@tailwindcss/typography'),
+        require('daisyui')
+    ],
+    daisyui: {
+        themes: ['dracula'],
+    },
+};
